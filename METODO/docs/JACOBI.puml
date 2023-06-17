@@ -1,0 +1,36 @@
+@startuml engine
+
+class Ecuacion {
+  - coeficiente_x: double
+  - coeficiente_y: double
+  - coeficiente_z: double
+  - resultado: double
+  + Ecuacion(coef_x: double, coef_y: double, coef_z: double, res: double)
+  + obtenerCoeficienteX(): double
+  + obtenerCoeficienteY(): double
+  + obtenerCoeficienteZ(): double
+  + obtenerResultado(): double
+  + despejarX(y: double, z: double): double
+  + despejarY(x: double, z: double): double
+  + despejarZ(x: double, y: double): double
+}
+
+class SistemaEcuaciones {
+  - sistema: vector<Ecuacion>
+  + ingresarEcuaciones(): void
+  + resolverSistema(): void
+  - imprimirEcuacionesReorganizadas(): void
+  - imprimirDespejesFinales(x: double, y: double, z: double): void
+  - imprimirSolucion(x: double, y: double, z: double): void
+}
+
+class UI {
+  + mostrarMenu(): void
+  + leerCoeficientes(): Ecuacion
+  + mostrarResultado(x: double, y: double, z: double): void
+}
+
+Ecuacion "1" -- "3" SistemaEcuaciones
+SistemaEcuaciones --> UI
+
+@enduml
