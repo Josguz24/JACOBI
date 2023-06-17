@@ -10,7 +10,7 @@ Este programa resuelve un sistema de ecuaciones lineales de tres incógnitas uti
 ## Instrucciones de Uso
 
 1. Clona el repositorio o descarga los archivos del programa.
-2. Abre el archivo `main.cpp` en tu editor de código o IDE.
+2. Abre el archivo `JACOBI.cpp` en tu editor de código o IDE.
 3. Compila y ejecuta el programa.
 4. Sigue las instrucciones en pantalla para ingresar los coeficientes de las ecuaciones.
 5. El programa mostrará la solución del sistema de ecuaciones.
